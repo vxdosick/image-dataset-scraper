@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">Dataset Finder</div>
+        </header>
+        <main class="main">
+            <section class="section">
+                <div class="section__container">
+                    <form method="post" action="/dataset">
+                        <p>Enter the type of images:</p>
+                        <input name="query" type="text">
+                        <p>Enter the count of images (less than 1000)</p>
+                        <input name="count" type="text">
+                        <button type="submit">Enter</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container"></div>
+        </footer>
+    </div>
+</body>
+</html>
