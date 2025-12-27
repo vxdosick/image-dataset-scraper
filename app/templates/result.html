@@ -21,9 +21,23 @@
         <main class="main">
             <section id="find" class="find">
                 <div class="find__container">
-                    <h2 class="find__maintitle"># Find the test dataset</h2>
-                    <p>Result of collection upon request - ‘{{ query }}’</p>
-                    <p>Number of images found - 0/{{ count }}</p>
+                    <h2 class="find__maintitle"># Result</h2>
+                    <p class="find__mainsubtitle">Result of collection upon request.</p>
+                    <div class="find__result_result">
+                        <p>Request: ‘{{ query }}’</p>
+                        <p>Number of images found: 0/{{ count }}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sites_result">
+                <div class="sites__container">
+                    <h2 class="find__maintitle"># Sites</h2>
+                    <p class="find__mainsubtitle">Websites from which the images were downloaded.</p>
+                    <ul>
+                        {% for site in sites %}
+                            <li><a target="_blank" href="{{ site }}">{{ site }}</a></li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </section>
         </main>
