@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>TestDatasetsFinderAI</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__container">Dataset Done!</div>
+            <div class="header__container">
+                <a class="header__logo" href="/">TestDatasetsFinderAI</a>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="/">Return</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="main">
-            <section class="section">
-                <div class="section__container">
-                        <p>Type of images</p>
-                        <p>{{ query }}</p>
-                        <p>Count</p>
-                        <p>{{ count }}</p>
+            <section id="find" class="find">
+                <div class="find__container">
+                    <h2 class="find__maintitle"># Find the test dataset</h2>
+                    <p>Result of collection upon request - ‘{{ query }}’</p>
+                    <p>Number of images found - 0/{{ count }}</p>
                 </div>
             </section>
         </main>

@@ -12,6 +12,7 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/dataset", response_class=HTMLResponse)
+# Find test dataset
+@app.post("/find-dataset", response_class=HTMLResponse)
 async def generate_dataset(request: Request, query: str = Form(...), count: int = Form(...)):
     return templates.TemplateResponse("result.html", {"request": request, "query": query, "count": count})

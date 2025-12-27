@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>TestDatasetsFinderAI</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__container">Dataset Finder</div>
+            <div class="header__container">
+                <a class="header__logo" href="/">TestDatasetsFinderAI</a>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="#find">Find dataset</a></li>
+                        <li class="header__authmenu">
+                            <a href="#">Login</a>
+                            <a href="#">Register</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="main">
-            <section class="section">
-                <div class="section__container">
-                    <form method="post" action="/dataset">
-                        <p>Enter the type of images:</p>
-                        <input name="query" type="text">
-                        <p>Enter the count of images (less than 1000)</p>
-                        <input name="count" type="text">
-                        <button type="submit">Enter</button>
-                    </form>
+            <section id="find" class="find">
+                <div class="find__container">
+                    <h2 class="find__maintitle"># Find the test dataset</h2>
+                    <p class="find__mainsubtitle">In just a few steps, collect your test dataset using AI and scraping.</p>
+                    <div class="find__formcontainer">
+                        <form method="post" action="/find-dataset">
+                            <div class="find__prompt">
+                                <label>Explain what you want to find</label>
+                                <textarea required name="query" maxlength="120"  placeholder="Example: A dataset consisting of pictures of sports cars..."></textarea>
+                            </div>
+                            <div class="find__imgcount">
+                                <label>Enter the count of images</label>
+                                <input required name="count" type="number" max="1000" placeholder="1000 max">
+                            </div>
+                            <div class="find__submit">
+                                <button type="submit">Find</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </section>
         </main>
